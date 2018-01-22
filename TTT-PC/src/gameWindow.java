@@ -48,7 +48,7 @@ public class gameWindow {
 		frmTtt.getContentPane().setLayout(null);
 		
 		infoLbl = new JLabel("");
-		infoLbl.setBounds(10, 11, 464, 30);
+		infoLbl.setBounds(10, 11, 372, 30);
 		frmTtt.getContentPane().add(infoLbl);
 		
 		btn1 = new JButton("");
@@ -250,6 +250,18 @@ public class gameWindow {
 		frmTtt.getContentPane().add(btn9);
 		
 		infoLbl.setText(player1.getNickname() + "'s turn");
+		
+		JButton restartBtn = new JButton("Restart");
+		restartBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				nicknamesWindow window = null;
+				window = new nicknamesWindow();
+				window.frame.setVisible(true);
+				frmTtt.setVisible(false);
+			}
+		});
+		restartBtn.setBounds(385, 15, 89, 23);
+		frmTtt.getContentPane().add(restartBtn);
 		player1.ifHisTurn = true;
 	}
 	
@@ -340,5 +352,4 @@ public class gameWindow {
 		btn8.setEnabled(false);
 		btn9.setEnabled(false);
 	}
-	
 }
