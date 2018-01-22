@@ -48,12 +48,12 @@ public class nicknamesWindow {
 		JButton startBtn = new JButton("Start");
 		startBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(!(player1field.getText().equals(player2field.getText()))) {
-				gameWindow gameWindow = new gameWindow(player1field.getText(), player2field.getText());
-				gameWindow.frame.setVisible(true);
-				frame.setVisible(false);
+				if(!(player1field.getText().equals(player2field.getText()))) {  //If nicknames don't equal each other
+				gameWindow gameWindow = new gameWindow(player1field.getText(), player2field.getText()); //creating game window
+				gameWindow.frmTtt.setVisible(true);
+				frame.setVisible(false); //disabling this window
 				}
-				else {
+				else { //If nicknames equal each other
 					warnLabel.setText("Please, choose different nicknames.");
 				}
 			}
