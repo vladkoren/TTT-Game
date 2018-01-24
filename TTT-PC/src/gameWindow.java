@@ -17,15 +17,15 @@ public class gameWindow {
 	char [][] field = new char[3][3]; //game field
 	Icon xIcon = new ImageIcon("res/img/xIcon.png");
 	Icon oIcon = new ImageIcon("res/img/oIcon.png");
-	JButton btn1;
-	JButton btn2;
-	JButton btn3;
-	JButton btn4;
-	JButton btn5;
-	JButton btn6;
-	JButton btn7;
-	JButton btn8;
-	JButton btn9;
+	JButton btn00;
+	JButton btn01;
+	JButton btn02;
+	JButton btn10;
+	JButton btn11;
+	JButton btn12;
+	JButton btn20;
+	JButton btn21;
+	JButton btn22;
 
 
 	public gameWindow(String nickname1, String nickname2) {
@@ -51,203 +51,203 @@ public class gameWindow {
 		infoLbl.setBounds(10, 11, 372, 30);
 		frmTtt.getContentPane().add(infoLbl);
 		
-		btn1 = new JButton("");
-		btn1.addActionListener(new ActionListener() {
+		btn00 = new JButton("");
+		btn00.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(player1.ifHisTurn==true) {
-					btn1.setIcon(player1.getIcon());
+					btn00.setIcon(player1.getIcon());
 					field[0][0] = player1.getType();
 					player1.ifHisTurn = false;
 				}
 				else {
-					btn1.setIcon(player2.getIcon());
+					btn00.setIcon(player2.getIcon());
 					field[0][0] = player2.getType();
 					player1.ifHisTurn = true;
 				}
-				btn1.setEnabled(false);
+				btn00.setEnabled(false);
 				printFieldConsole();
 				nextTurn();
 				checkForWin();
 			}
 		});
-		btn1.setBounds(90, 100, 100, 100);
-		frmTtt.getContentPane().add(btn1);
+		btn00.setBounds(90, 100, 100, 100);
+		frmTtt.getContentPane().add(btn00);
 		
-		btn2 = new JButton("");
-		btn2.addActionListener(new ActionListener() {
+		btn01 = new JButton("");
+		btn01.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(player1.ifHisTurn==true) {
-					btn2.setIcon(player1.getIcon());
+					btn01.setIcon(player1.getIcon());
 					field[0][1] = player1.getType();
 					player1.ifHisTurn = false;
 				}
 				else {
-					btn2.setIcon(player2.getIcon());
+					btn01.setIcon(player2.getIcon());
 					field[0][1] = player2.getType();
 					player1.ifHisTurn = true;
 				}
-				btn2.setEnabled(false);
+				btn01.setEnabled(false);
 				printFieldConsole();
 				nextTurn();
 				checkForWin();
 			}
 		});
-		btn2.setBounds(200, 100, 100, 100);
-		frmTtt.getContentPane().add(btn2);
+		btn01.setBounds(200, 100, 100, 100);
+		frmTtt.getContentPane().add(btn01);
 		
-		btn3 = new JButton("");
-		btn3.addActionListener(new ActionListener() {
+		btn02 = new JButton("");
+		btn02.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(player1.ifHisTurn==true) {
-					btn3.setIcon(player1.getIcon());
+					btn02.setIcon(player1.getIcon());
 					field[0][2] = player1.getType();
 					player1.ifHisTurn = false;
 				}
 				else {
-					btn3.setIcon(player2.getIcon());
+					btn02.setIcon(player2.getIcon());
 					field[0][2] = player2.getType();
 					player1.ifHisTurn = true;
 				}
-				btn3.setEnabled(false);
+				btn02.setEnabled(false);
 				printFieldConsole();
 				nextTurn();
 				checkForWin();
 			}
 		});
-		btn3.setBounds(310, 100, 100, 100);
-		frmTtt.getContentPane().add(btn3);
+		btn02.setBounds(310, 100, 100, 100);
+		frmTtt.getContentPane().add(btn02);
 		
-		btn4 = new JButton("");
-		btn4.addActionListener(new ActionListener() {
+		btn10 = new JButton("");
+		btn10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(player1.ifHisTurn==true) {
-					btn4.setIcon(player1.getIcon());
+					btn10.setIcon(player1.getIcon());
 					field[1][0] = player1.getType();
 					player1.ifHisTurn=false;
 				}
 				else {
-					btn4.setIcon(player2.getIcon());
+					btn10.setIcon(player2.getIcon());
 					field[1][0] = player2.getType();
 					player1.ifHisTurn=true;
 				}
-				btn4.setEnabled(false);
+				btn10.setEnabled(false);
 				printFieldConsole();
 				nextTurn();
 				checkForWin();
 			}
 		});
-		btn4.setBounds(90, 211, 100, 100);
-		frmTtt.getContentPane().add(btn4);
+		btn10.setBounds(90, 211, 100, 100);
+		frmTtt.getContentPane().add(btn10);
 		
-		btn5 = new JButton("");
-		btn5.addActionListener(new ActionListener() {
+		btn11 = new JButton("");
+		btn11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(player1.ifHisTurn==true) {
-					btn5.setIcon(player1.getIcon());
+					btn11.setIcon(player1.getIcon());
 					field[1][1] = player1.getType();
 					player1.ifHisTurn=false;
 				}
 				else {
-					btn5.setIcon(player2.getIcon());
+					btn11.setIcon(player2.getIcon());
 					field[1][1] = player2.getType();
 					player1.ifHisTurn=true;
 				}
-				btn5.setEnabled(false);
+				btn11.setEnabled(false);
 				printFieldConsole();
 				nextTurn();
 				checkForWin();
 			}
 		});
-		btn5.setBounds(200, 211, 100, 100);
-		frmTtt.getContentPane().add(btn5);
+		btn11.setBounds(200, 211, 100, 100);
+		frmTtt.getContentPane().add(btn11);
 		
-		btn6 = new JButton("");
-		btn6.addActionListener(new ActionListener() {
+		btn12 = new JButton("");
+		btn12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(player1.ifHisTurn==true) {
-					btn6.setIcon(player1.getIcon());
+					btn12.setIcon(player1.getIcon());
 					field[1][2] = player1.getType();
 					player1.ifHisTurn=false;
 				}
 				else {
-					btn6.setIcon(player2.getIcon());
+					btn12.setIcon(player2.getIcon());
 					field[1][2] = player2.getType();
 					player1.ifHisTurn=true;
 				}
-				btn6.setEnabled(false);
+				btn12.setEnabled(false);
 				printFieldConsole();
 				nextTurn();
 				checkForWin();
 			}
 		});
-		btn6.setBounds(310, 211, 100, 100);
-		frmTtt.getContentPane().add(btn6);
+		btn12.setBounds(310, 211, 100, 100);
+		frmTtt.getContentPane().add(btn12);
 		
-		btn7 = new JButton("");
-		btn7.addActionListener(new ActionListener() {
+		btn20 = new JButton("");
+		btn20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(player1.ifHisTurn==true) {
-					btn7.setIcon(player1.getIcon());
+					btn20.setIcon(player1.getIcon());
 					field[2][0] = player1.getType();
 					player1.ifHisTurn=false;
 				}
 				else {
-					btn7.setIcon(player2.getIcon());
+					btn20.setIcon(player2.getIcon());
 					field[2][0] = player2.getType();
 					player1.ifHisTurn=true;
 				}
-				btn7.setEnabled(false);
+				btn20.setEnabled(false);
 				printFieldConsole();
 				nextTurn();
 				checkForWin();
 			}
 		});
-		btn7.setBounds(90, 322, 100, 100);
-		frmTtt.getContentPane().add(btn7);
+		btn20.setBounds(90, 322, 100, 100);
+		frmTtt.getContentPane().add(btn20);
 		
-		btn8 = new JButton("");
-		btn8.addActionListener(new ActionListener() {
+		btn21 = new JButton("");
+		btn21.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(player1.ifHisTurn==true) {
-					btn8.setIcon(player1.getIcon());
+					btn21.setIcon(player1.getIcon());
 					field[2][1] = player1.getType();
 					player1.ifHisTurn=false;
 				}
 				else {
-					btn8.setIcon(player2.getIcon());
+					btn21.setIcon(player2.getIcon());
 					field[2][1] = player2.getType();
 					player1.ifHisTurn=true;
 				}
-				btn8.setEnabled(false);
+				btn21.setEnabled(false);
 				printFieldConsole();
 				nextTurn();
 				checkForWin();
 			}
 		});
-		btn8.setBounds(200, 322, 100, 100);
-		frmTtt.getContentPane().add(btn8);
+		btn21.setBounds(200, 322, 100, 100);
+		frmTtt.getContentPane().add(btn21);
 		
-		btn9 = new JButton("");
-		btn9.addActionListener(new ActionListener() {
+		btn22 = new JButton("");
+		btn22.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(player1.ifHisTurn==true) {
-					btn9.setIcon(player1.getIcon());
+					btn22.setIcon(player1.getIcon());
 					field[2][2] = player1.getType();
 					player1.ifHisTurn=false;
 				}
 				else {
-					btn9.setIcon(player2.getIcon());
+					btn22.setIcon(player2.getIcon());
 					field[2][2] = player2.getType();
 					player1.ifHisTurn=true;
 				}
-				btn9.setEnabled(false);
+				btn22.setEnabled(false);
 				printFieldConsole();
 				nextTurn();
 				checkForWin();
 			}
 		});
-		btn9.setBounds(310, 322, 100, 100);
-		frmTtt.getContentPane().add(btn9);
+		btn22.setBounds(310, 322, 100, 100);
+		frmTtt.getContentPane().add(btn22);
 		
 		infoLbl.setText(player1.getNickname() + "'s turn");
 		
@@ -342,14 +342,14 @@ public class gameWindow {
 	}
 	void win(player player) {
 		infoLbl.setText(player.getNickname() + " wins!");
-		btn1.setEnabled(false);
-		btn2.setEnabled(false);
-		btn3.setEnabled(false);
-		btn4.setEnabled(false);
-		btn5.setEnabled(false);
-		btn6.setEnabled(false);
-		btn7.setEnabled(false);
-		btn8.setEnabled(false);
-		btn9.setEnabled(false);
+		btn00.setEnabled(false);
+		btn01.setEnabled(false);
+		btn02.setEnabled(false);
+		btn10.setEnabled(false);
+		btn11.setEnabled(false);
+		btn12.setEnabled(false);
+		btn20.setEnabled(false);
+		btn21.setEnabled(false);
+		btn22.setEnabled(false);
 	}
 }
