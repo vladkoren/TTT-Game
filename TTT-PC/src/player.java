@@ -37,4 +37,8 @@ public class player {
 		return icon;
 	}
 	
+	void turn(int x, int y, gameField field) {
+		field.setSquare(x, y, type);
+	}
+	
 }
